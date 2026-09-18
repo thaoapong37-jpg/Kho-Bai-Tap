@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f0f4f8; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        .form-container { background: #ffffff; padding: 35px 30px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); width: 100%; max-width: 420px; }
+        .form-header { text-align: center; margin-bottom: 25px; }
+        .form-header h2 { color: #1e293b; font-size: 24px; margin-bottom: 8px; }
+        .form-header p { color: #64748b; font-size: 14px; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 600; color: #334155; font-size: 14px; }
+        .form-group label span { color: #e11d48; }
+        .form-group input { width: 100%; padding: 12px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 15px; outline: none; transition: 0.2s; }
+        .form-group input:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.15); }
+        .helper-text { font-size: 12px; color: #64748b; margin-top: 4px; display: block; }
+        /* Fitts' Law: Nút bấm to, rõ, dễ bấm trên cả mobile */
+        .btn-submit { width: 100%; padding: 14px; background-color: #2563eb; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: 0.2s; margin-top: 10px; }
+        .btn-submit:hover { background-color: #1d4ed8; }
+        .form-footer { text-align: center; margin-top: 20px; font-size: 14px; color: #64748b; }
+        .form-footer a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Tạo tài khoản mới</h2>
+            <p>Vui lòng điền đầy đủ thông tin bên dưới</p>
+        </div>
+
+        <form action="success.html" method="GET">
+            <div class="form-group">
+                <label for="fullname">Họ và tên <span>*</span></label>
+                <input type="text" id="fullname" name="fullname" placeholder="Ví dụ: Nguyễn Văn A" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Địa chỉ Email <span>*</span></label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu <span>*</span></label>
+                <input type="password" id="password" name="password" placeholder="Tối thiểu 8 ký tự" required>
+                <span class="helper-text">Bao gồm chữ cái, số và ký tự đặc biệt</span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Xác nhận mật khẩu <span>*</span></label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Nhập lại mật khẩu" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Đăng ký ngay</button>
+        </form>
+
+        <div class="form-footer">
+            Đã có tài khoản? <a href="#">Đăng nhập</a>
+        </div>
+    </div>
+
+</body>
+</html>
